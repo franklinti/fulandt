@@ -37,7 +37,7 @@ const Navigation = () => {
       </div>
       <div className='py-10'>
         <Button sx={{
-          width: "100%", borderRadius: "29px",
+          minWidth:"300px",maxWidth: "100%", borderRadius: "29px",
           py: "15px", bgcolor: "#1e88e5"
         }} variant='contained'>
           Ful&t

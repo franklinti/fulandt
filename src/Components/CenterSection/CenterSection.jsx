@@ -7,13 +7,11 @@ import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import TagFacesIcon from '@mui/icons-material/TagFaces';
 import TweetCard from './TweetCard';
 
-
-
 const validationSchema = Yup.object().shape({
     content: Yup.string().required("Mensagem texto é obrigatório")
 })
 
-const HomeSection = () => {
+const CenterSection = () => {
 
     const [uploadingImage, setUploadingImage] = useState(false);
     const [selectImage, setSelectedImage] = useState("");
@@ -60,7 +58,7 @@ const HomeSection = () => {
                                 <img src="" alt=""/>
                             </div>*/ }
                             <div className='flex justify-between items-center mt-5'>
-                                <div className='flex space-5 items-center'>
+                                <div className='flex space-x-5 items-center'>
                                     <label className='flex items-center space-x-2 rouded-md cursor-pointer'>
                                         <ImageIcon className='text-[#1d9bf0]' />
                                         <input type='file' name='imageFile' className='hidden'
@@ -72,17 +70,16 @@ const HomeSection = () => {
                                 <div>
                                 <Button sx={{
                                     width: "100%",
-                                    borderRadius: "25px",
+                                    borderRadius: "29px",
                                     py: "8px",
                                     bgcolor: "#1e88e5",
-                                    padding: "10px"
+                                    padding: "8px"
                                 }} variant='contained'
                                 type='subit'>
                                     tweet
                                 </Button>
                             </div>
                             </div>
-                            
                         </form>
                     </div>
                 </div>
@@ -94,4 +91,4 @@ const HomeSection = () => {
     )
 }
 
-export default HomeSection;
+export default CenterSection;
