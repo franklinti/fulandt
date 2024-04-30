@@ -9,9 +9,14 @@ import FileUploadIcon from '@mui/icons-material/FileUpload';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { FavoriteOutlined } from '@mui/icons-material';
+import ReplyModal from './ReplyModal';
 
 const TweetCard = () => {
     const navigate = useNavigate();
+    const [openReplyModal,setOpenReplyModal] = React.useState(false);
+    const handleOpenReply =()=> setOpenReplyModal(true);
+    const handleCloseReply =()=> setOpenReplyModal(false);
+    
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -35,7 +40,7 @@ const TweetCard = () => {
     console.log("like")
    }
     return (
-        <div className=''>
+        <React.Fragment>
            {/**  <div className='flex items-center font-semibold text-gray-700'>
                 <RepeatIcon />
             </div>*/}
@@ -43,7 +48,7 @@ const TweetCard = () => {
                 <Avatar onClick={() => navigate(`/profile/${6}`)} alt='username' className='cursor-pointer'
                     src="https://pensamentoverde.com.br/wp-content/uploads/2014/10/Depositphotos_4067864_original_dimakin.jpg" />
                 <div className='w-full'>
-                    {/* envio chat */ }
+                    {/* cabeçalho chat */ }
                     <div className='flex justify-between items-center'>
                         <div className='flex cursor-pointer items-center space-x-2'>
                             <span className='font-semibold'>Franklin Silva</span>
@@ -74,7 +79,7 @@ const TweetCard = () => {
                             </Menu>
                         </div>
                     </div>
-                    {/** exibe chat */}
+                    {/** body chat */}
                     <div className='mt-2'>
                         <div onClick={()=>navigate(`/twit/${3}`)} className='cursor-pointer '>
                             <p className='mb-2 p-0'>full stack projeto</p>
@@ -83,7 +88,7 @@ const TweetCard = () => {
                         </div>
                         <div className='py-5 flex flex-wrap justify-between items-center'>
                             <div className='space-x-3 flex items-center text-gray-600'> 
-                                <ChatBubbleOutlineIcon className="cursor-point" onClick={handleOpenReplyModel}/>
+                                <ChatBubbleOutlineIcon className="cursor-pointer" onClick={handleOpenReply}/>
                                 <p>187</p>
                             </div>
                             <div className={`${true? "text-pink-600": "text-gray-600"} space-x-3 flex items-center`}>
@@ -100,15 +105,17 @@ const TweetCard = () => {
                                 <p>200000000587</p>
                             </div>
                             <div className='space-x-3 flex items-center text-gray-600'> 
-                                <FileUploadIcon className="cursor-point" onClick={handleOpenReplyModel}/>
+                                <FileUploadIcon className="cursor-pointer" onClick={handleOpenReplyModel}/>
                                
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
-        </div>
+            <section>
+                <ReplyModal handleClose={handleCloseReply} open={openReplyModal}/>
+            </section>
+        </React.Fragment>
     )
 }
 

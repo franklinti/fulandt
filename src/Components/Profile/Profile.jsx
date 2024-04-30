@@ -7,14 +7,17 @@ import CalendarIcon from '@mui/icons-material/CalendarToday';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 import TweetCard from '../CenterSection/TweetCard';
 import { useNavigate } from 'react-router-dom';
+import ProfileModal from './ProfileModal';
 
 const Profile = () => {
     const [tabValue, setTabValue] = useState("1")
     const navigate = useNavigate();
+
+    const [openProfileModal,setOpenProfileModal] = useState(false)
+    const handleOpenProfile =()=> setOpenProfileModal(true);
+    const handleClose =()=> setOpenProfileModal(false);
+    
     const handleBack = () => {
-        console.log("back")
-    }
-    const handleOpenProfile = () => {
         console.log("back")
     }
     const handleFollowUser = () => {
@@ -113,6 +116,10 @@ const Profile = () => {
                         <TabPanel value="4">Likes</TabPanel>
                     </TabContext>
                 </Box>
+            </section>
+                    
+            <section>
+                <ProfileModal handleClose={handleClose} open={openProfileModal}/>
             </section>
 
         </div>
