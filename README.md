@@ -1,6 +1,11 @@
 # Ful&t
  Rede Social Ful&t 2024
 
+# Tecnologias
+Backend - Java - Spring boot web, JPA, Security,Mysql, Jwt Token,etc.
+Frontedn- React JS, Formit - @MUI - YUP ,etc.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
