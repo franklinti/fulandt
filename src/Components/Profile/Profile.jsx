@@ -18,7 +18,7 @@ const Profile = () => {
     const handleClose =()=> setOpenProfileModal(false);
     
     const handleBack = () => {
-        console.log("back")
+        navigate(-1);
     }
     const handleFollowUser = () => {
         console.log("back")
@@ -34,11 +34,12 @@ const Profile = () => {
     return (
         <div>
             <section className='bg-white,z-50 flex items-center sticky top-0 bg-opcacity-95'>
-                <KeyboardBackspaceIcon className='cursor-point' onClick={handleBack} />
+                <KeyboardBackspaceIcon className='cursor-pointer' onClick={handleBack} />
                 <h1 className='py-5 text-x1 font-bold opacity-90 ml-5'>Franklin Silva</h1>
             </section>
             <section>
-                <img className='w[100%] h-[15rem] object-cover' src="https://cdn.pixabay.com/photo/2023/07/25/19/47/milky-way-8149815_640.jpg" />
+                <img className='w- [100%] h-[15rem] object-cover' 
+                src="https://cdn.pixabay.com/photo/2023/07/25/19/47/milky-way-8149815_640.jpg" />
             </section>
             <section className='pl-6'>
                 <div className='flex justify-between items-start mt-5 h-[5rem]'>

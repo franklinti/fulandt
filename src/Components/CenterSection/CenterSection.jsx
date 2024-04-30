@@ -43,7 +43,7 @@ const CenterSection = () => {
             <section className={`pb-10`}>
                 <div className="flex space-x-5">
                     <Avatar alt='username'
-                        src='https://res.cloundinary.com/dnbw04gbs/image/upload/v1690639851/instagram%20post/bywtgh9vj4e80aywstss.png' />
+                        src="https://pensamentoverde.com.br/wp-content/uploads/2014/10/Depositphotos_4067864_original_dimakin.jpg" />
                     <div className='w-full'>
                         <form onSubmit={formik.handleSubmit}>
                             <div>
@@ -54,9 +54,6 @@ const CenterSection = () => {
                                     <span className='text-red-500'>{formik.errors.content}</span>
                                 )}
                             </div>
-                            {/*<div>
-                                <img src="" alt=""/>
-                            </div>*/ }
                             <div className='flex justify-between items-center mt-5'>
                                 <div className='flex space-x-5 items-center'>
                                     <label className='flex items-center space-x-2 rouded-md cursor-pointer'>
