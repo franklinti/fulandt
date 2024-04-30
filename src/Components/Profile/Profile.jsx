@@ -38,7 +38,7 @@ const Profile = () => {
                 <h1 className='py-5 text-x1 font-bold opacity-90 ml-5'>Franklin Silva</h1>
             </section>
             <section>
-                <img className='w- [100%] h-[15rem] object-cover' 
+                <img className='w-[100%] h-[15rem] object-cover' 
                 src="https://cdn.pixabay.com/photo/2023/07/25/19/47/milky-way-8149815_640.jpg" />
             </section>
             <section className='pl-6'>
